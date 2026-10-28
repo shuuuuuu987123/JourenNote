@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>常連ノート</title>
+<link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+<body>
+<h1>常連ノート</h1>
+<table>
+	<tr>
+		<th>YouTube名</th>
+		<th>TEKKEN_ID</th>
+		<th>メインキャラ</th>
+		<th>メモ</th>
+	</tr>
+	<tr th:each="player : ${playerList}">
+		<td th:text="${player.youtubeName}")></td>
+		<td th:text="${player.tekkenId}"></td>
+		<td th:text="${player.cname}"></td>
+		<td th:text="${player.memo}"></td>
+	</tr>
+</table>
+</body>
+</html>
